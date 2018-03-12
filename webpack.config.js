@@ -1,11 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: "./app",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js"
+    filename: "bundle.js",
+    publicPath: "/dist/"
   },
   module: {
     rules: [
@@ -20,11 +22,14 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|patt)$/,
         use: [
           {
             loader: 'file-loader',
-            options: {}  
+            options: {
+              name: '[name].[ext]',
+              publicPath: '__webpack_public_path__'
+            }  
           }
         ]
       },
@@ -33,14 +38,15 @@ module.exports = {
         use: [ {
           loader: 'html-loader',
           options: {
+            attrs: [':src', ':url']
           }
-        }]
-      }
+        },]
+      },
     ]
   },
   plugins: [new HtmlWebpackPlugin({
     title: 'Welcome to AR',
-    template: 'src/template.html',
+    template: './src/template.html',
     filename: '../index.html'
   })]
 };
