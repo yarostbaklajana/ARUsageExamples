@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/dist/"
+    publicPath: "dist/"
   },
   module: {
     rules: [
@@ -38,7 +38,7 @@ module.exports = {
         use: [ {
           loader: 'html-loader',
           options: {
-            attrs: [':src', ':url']
+            attrs: [':src', ':url', ':patternUrl']
           }
         },]
       },
