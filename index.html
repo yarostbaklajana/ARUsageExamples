@@ -4,12 +4,12 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs>
+
         <a-text value="You did it!!"></a-text>
         <a-image src="__webpack_public_path__/homer.png"></a-image>
-        <img src="__webpack_public_path__/homer.png"/>
-  	<a-marker-camera preset="pattern" url="__webpack_public_path__/pattern-marker.patt">
+  	<a-marker-camera preset="pattern" patternUrl="__webpack_public_path__/pattern-marker.patt">
   	</a-marker-camera>
   	<a-entity camera></a-entity>
     </a-scene>
-  <script type="text/javascript" src="/dist/bundle.js"></script></body>
+  <script type="text/javascript" src="dist/bundle.js"></script></body>
 </html>

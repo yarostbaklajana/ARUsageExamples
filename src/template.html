@@ -4,10 +4,10 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs>
+
         <a-text value="You did it!!"></a-text>
         <a-image src="homer.png"></a-image>
-        <img src="homer.png"/>
-  	<a-marker-camera preset="pattern" url="pattern-marker.patt">
+  	<a-marker-camera preset="pattern" patternUrl="pattern-marker.patt">
   	</a-marker-camera>
   	<a-entity camera></a-entity>
     </a-scene>
