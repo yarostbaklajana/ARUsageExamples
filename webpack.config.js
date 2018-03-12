@@ -28,7 +28,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              publicPath: '__webpack_public_path__'
+              publicPath: 'dist/'
             }  
           }
         ]
