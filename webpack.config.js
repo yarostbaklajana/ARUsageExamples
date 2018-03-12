@@ -22,7 +22,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|jpg|patt|gltf)$/,
+        test: /\.(png|jpg|patt|gltf|bin)$/,
         use: [
           {
             loader: 'file-loader',
@@ -46,6 +46,6 @@ module.exports = {
   plugins: [new HtmlWebpackPlugin({
     title: 'Welcome to AR',
     template: './src/template.html',
-    filename: 'index.html'
+    filename: './index.html'
   })]
 };
