@@ -16,3 +16,8 @@ export const App = () => (
             </div>
         </Router>
 );
+
+//api request example
+// fetch('/api/user/123')
+//     .then(r=> r.json())
+//     .then(x=> console.log('User:', x))

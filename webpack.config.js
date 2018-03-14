@@ -15,7 +15,10 @@ module.exports = {
     historyApiFallback: {
       index: 'index.html'
     },
-    port: 9000
+    port: 9000,
+    proxy: {
+      '/api': 'http://localhost:9001'
+    }
   },
   module: {
     rules: [
