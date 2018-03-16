@@ -8,12 +8,10 @@ import { Search } from './search';
 import { ARNavigation } from './ar-navigation';
 
 export const App = () => (
-    <div>
         <Router>
             <div>
-            <Route exact path='/' component={Search}/>
-            <Route path='/navigate/:id' component={ARNavigation}/>
+                <Route exact path='/' component={Search}/>
+                <Route path='/navigate/:id' component={ARNavigation}/>
             </div>
         </Router>
-    </div>
 );
