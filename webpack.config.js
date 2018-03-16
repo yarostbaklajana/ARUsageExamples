@@ -9,6 +9,14 @@ module.exports = {
     filename: "bundle.js",
     publicPath: ""
   },
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    historyApiFallback: {
+      index: 'index.html'
+    },
+    port: 9000
+  },
   module: {
     rules: [
       {
@@ -17,7 +25,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['es2015']
+            presets: ['es2015', 'react']
           }
         }
       },
