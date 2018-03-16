@@ -30,6 +30,7 @@
     "webpack-cli": "^2.0.10"
   },
   "dependencies": {
-    "aframe-obj-loader-component": "^0.2.0"
+    "aframe-obj-loader-component": "^0.2.0",
+    "import-all-from": "^1.0.1"
   }
 }

@@ -43,6 +43,9 @@ module.exports = {
       },
     ]
   },
+  node: {
+    fs: "empty"
+ },
   plugins: [new HtmlWebpackPlugin({
     title: 'Welcome to AR',
     template: './src/template.html',
